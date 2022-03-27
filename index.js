@@ -3,7 +3,7 @@ const path = require("path")
 const TelegramBot = require("node-telegram-bot-api")
 
 const GAME = "drago"
-const PORT = process.env.PORT || 3000
+const PORT = procces.env.PORT || 3000
 const TOKEN = "5226985158:AAHDbWHIXP7RaH2hjG3UVP6maogbP7eK0To"
 
 const queries = {}
