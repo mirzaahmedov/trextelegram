@@ -3,8 +3,8 @@ const path = require("path")
 const TelegramBot = require("node-telegram-bot-api")
 
 const GAME = "drago"
-const PORT = process.env.PORT
-const TOKEN = ""
+const PORT = process.env.PORT || 3000
+const TOKEN = "5226985158:AAHDbWHIXP7RaH2hjG3UVP6maogbP7eK0To"
 
 const queries = {}
 
@@ -25,7 +25,7 @@ bot.on("callback_query", function (query) {
 
     queries[query.id] = query;
 
-    let gameurl = "https://YOUR_URL_HERE/index.html?  id="+query.id;
+    let gameurl = "https://trextelegram.herokuapp.com/id="+query.id;
 
     bot.answerCallbackQuery({
 
