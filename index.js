@@ -8,10 +8,10 @@ const TOKEN = "5226985158:AAHDbWHIXP7RaH2hjG3UVP6maogbP7eK0To"
 
 const queries = {}
 
-const bot = new TelegramBot()
+const bot = new TelegramBot(TOKEN, { polling: true })
 const app = express()
 
-express.use(express.static(path.join(path.join(__dirname, "public"))))
+app.use(express.static(path.join(path.join(__dirname, "public"))))
 
 bot.onText(/start|game/, (msg) => bot.sendGame(msg.from.id, GAME));
 
