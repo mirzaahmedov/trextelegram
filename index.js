@@ -25,7 +25,7 @@ bot.on("callback_query", function (query) {
 
     queries[query.id] = query;
 
-    let gameurl = "https://trextelegram.herokuapp.com/id="+query.id;
+    let gameurl = "https://trextelegram.herokuapp.com?id="+query.id;
 
     bot.answerCallbackQuery({
 
